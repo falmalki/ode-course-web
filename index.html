@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordinary Differential Equations - Interactive Course</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/matlab.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">📐 ODE Course</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('modules')">Modules</a></li>
+                <li><a href="#" onclick="showSection('progress')">My Progress</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Ordinary Differential Equations</h1>
+                <p class="subtitle">A Comprehensive Interactive Course for Mathematics Students</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Modules</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Examples</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Exercises</span>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="showSection('modules')">Start Learning →</button>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Comprehensive Content</h3>
+                    <p>From first-order ODEs to Laplace transforms</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Step-by-Step Solutions</h3>
+                    <p>Detailed examples with complete working</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Practice Problems</h3>
+                    <p>Extensive exercises with answers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your learning journey</p>
+                </div>
+            </div>
+
+            <div class="course-outline">
+                <h2>Course Outline</h2>
+                <div class="module-grid" id="home-module-grid"></div>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="modules" class="section">
+            <div class="modules-header">
+                <h1>Course Modules</h1>
+                <p>Click on any module to start learning</p>
+            </div>
+            <div class="modules-grid" id="modules-grid"></div>
+        </section>
+
+        <!-- Module Content Section -->
+        <section id="module-content" class="section">
+            <div class="module-nav">
+                <button class="btn-secondary" onclick="showSection('modules')">← Back to Modules</button>
+                <span id="module-nav-title"></span>
+            </div>
+            <div class="module-content-wrapper">
+                <aside class="sidebar" id="module-sidebar"></aside>
+                <div class="content-area" id="content-area">
+                    <div id="lesson-content"></div>
+                    <div id="exercise-panel" class="exercise-panel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="section">
+            <h1>My Progress</h1>
+            <div class="progress-overview">
+                <div class="progress-circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="bg-circle"/>
+                        <circle cx="50" cy="50" r="45" class="progress-circle-svg" id="progress-circle"/>
+                    </svg>
+                    <div class="progress-text">
+                        <span id="progress-percent">0%</span>
+                        <span>Complete</span>
+                    </div>
+                </div>
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <span id="modules-completed">0</span>
+                        <span>Modules Completed</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span id="exercises-completed">0</span>
+                        <span>Exercises Done</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-modules" id="progress-modules"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h1>About This Course</h1>
+            <div class="about-content">
+                <div class="about-card">
+                    <h2>Course Overview</h2>
+                    <p>This comprehensive course covers ordinary differential equations, designed for mathematics students. Each module includes theory, solved examples, and practice exercises.</p>
+                </div>
+                <div class="about-card">
+                    <h2>Prerequisites</h2>
+                    <ul>
+                        <li>Calculus I & II</li>
+                        <li>Linear Algebra basics</li>
+                        <li>Differential Equations fundamentals</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h2>What You'll Learn</h2>
+                    <ul>
+                        <li>First-order ODEs (separable, exact, linear)</li>
+                        <li>Higher-order linear ODEs</li>
+                        <li>Series solutions</li>
+                        <li>Laplace transforms</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h2>References</h2>
+                    <ul>
+                        <li>Schaum's Outline of Differential Equations</li>
+                        <li>Boyce \& DiPrima</li>
+                        <li>Kreyszig</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 ODE Course | Created with OpenClaw</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
