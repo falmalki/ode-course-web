@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/matlab.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +32,6 @@
     </header>
 
     <main id="main-content">
-        <!-- Home Section -->
         <section id="home" class="section active">
             <div class="hero">
                 <h1>Ordinary Differential Equations</h1>
@@ -54,7 +62,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">💻</div>
                     <h3>Step-by-Step Solutions</h3>
-                    <p>Detailed examples with complete working</p>
+                    <p>200+ detailed examples with complete working</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">✅</div>
@@ -74,7 +82,6 @@
             </div>
         </section>
 
-        <!-- Modules Section -->
         <section id="modules" class="section">
             <div class="modules-header">
                 <h1>Course Modules</h1>
@@ -83,7 +90,6 @@
             <div class="modules-grid" id="modules-grid"></div>
         </section>
 
-        <!-- Module Content Section -->
         <section id="module-content" class="section">
             <div class="module-nav">
                 <button class="btn-secondary" onclick="showSection('modules')">← Back to Modules</button>
@@ -98,7 +104,6 @@
             </div>
         </section>
 
-        <!-- Progress Section -->
         <section id="progress" class="section">
             <h1>My Progress</h1>
             <div class="progress-overview">
@@ -126,13 +131,12 @@
             <div class="progress-modules" id="progress-modules"></div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section">
             <h1>About This Course</h1>
             <div class="about-content">
                 <div class="about-card">
                     <h2>Course Overview</h2>
-                    <p>This comprehensive course covers ordinary differential equations, designed for mathematics students. Each module includes theory, solved examples, and practice exercises.</p>
+                    <p>This comprehensive course covers ordinary differential equations, designed for mathematics students. Each module includes 20+ detailed solved examples and practice exercises.</p>
                 </div>
                 <div class="about-card">
                     <h2>Prerequisites</h2>
@@ -155,7 +159,7 @@
                     <h2>References</h2>
                     <ul>
                         <li>Schaum's Outline of Differential Equations</li>
-                        <li>Boyce \& DiPrima</li>
+                        <li>Boyce & DiPrima</li>
                         <li>Kreyszig</li>
                     </ul>
                 </div>
